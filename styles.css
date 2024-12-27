@@ -34,9 +34,7 @@ main {
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
 }
 
 .wrapper {
@@ -47,6 +45,7 @@ main {
     grid-template-rows: repeat(4, fit-content(250px));
     gap: 1rem;
     padding: 1.5rem;
+    margin: 0 auto;
 }
 
 a {
@@ -254,4 +253,124 @@ i {
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: -2px;
+}
+
+@media (max-width:1024px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        grid-template-areas:
+            "item1 item1"
+            "item1 item1"
+            "item2 item3"
+            "item2 item3"
+            "item4 item4"
+            "item4 item4"
+            "item4 item4"
+            "item5 item5"
+            "item5 item5"
+            "item6 item6"
+            "item7 item8"
+            "item7 item8"
+            "item7 item8"
+            "item7 item8";
+        grid-template-columns: fit-content(calc(50% - .5rem)) fit-content(calc(50% - .5rem));
+        grid-template-rows: repeat(14, fit-content(150px));
+        width: 100%;
+        overflow: hidden;
+
+    }
+
+    .item1 {
+        grid-area: item7;
+    }
+
+    .item2 {
+        grid-area: item1;
+        padding: 4.5rem;
+
+    }
+
+    .item3 {
+        grid-area: item4;
+        padding: 1.5rem;
+    }
+
+    .item3 img {
+        transform: none;
+    }
+
+    .item4 {
+        grid-area: item2;
+    }
+
+    .item5 {
+        grid-area: item3;
+
+    }
+
+    .item6 {
+        grid-area: item8;
+
+    }
+
+    .item7 {
+        grid-area: item6;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .item8 {
+        grid-area: item5;
+    }
+}
+
+@media (max-width:767px) {
+
+    html,
+    body {
+        font-size: 10px;
+    }
+
+    .wrapper {
+        grid-template-areas:
+            "item1"
+            "item1"
+            "item2"
+            "item3"
+            "item3"
+            "item4"
+            "item4"
+            "item4"
+            "item5"
+            "item5"
+            "item5"
+            "item6"
+            "item7"
+            "item7"
+            "item8"
+            "item8";
+        grid-template-columns: fit-content(calc(100%)) ;
+        grid-template-rows: repeat(14, fit-content(150px));
+        width: 100%;
+        overflow: hidden;
+    }
+    .item7 {
+        flex-flow: column nowrap;
+    }
+    .item8 {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+    .grid__item h2, .grid__item span {
+        text-align: center;
+    }
 }
