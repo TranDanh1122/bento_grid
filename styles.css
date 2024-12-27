@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "DMSans";
+    src: url(./assets/fonts/DMSans-VariableFont_opsz,wght.ttf);
+}
+
+@font-face {
+    font-family: "DMSans Italic";
+    src: url(./assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf);
+}
+
+:root {
+    --purple_100: hsl(254, 88%, 90%);
+    --purple_500: hsl(256, 67%, 59%);
+    --yellow_100: hsl(31, 66%, 93%);
+    --yellow_500: hsl(39, 100%, 71%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 7%);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "DMSans", sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, fit-content(250px));
+    grid-template-rows: repeat(4, fit-content(250px));
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+i {
+    display: inline-block;
+}
+
+.grid__item {
+    padding: 1.5rem;
+    padding-bottom: unset;
+    border-radius: 1rem;
+    box-shadow: 0 0 .25rem .25rem rgba(0, 0, 0, .1);
+}
+
+.item1 {
+    grid-area: 1/1/span 2/span 1;
+    background-color: var(--yellow_100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+
+}
+
+.item1 h2 {
+    font-size: 2.5rem;
+    line-height: 2.25rem;
+    letter-spacing: -2px;
+    font-weight: 400;
+    width: 90%;
+}
+
+.item1 h2 span {
+    font-family: "DMSans Italic", sans-serif;
+    color: var(--purple_500);
+}
+
+.item1 img {
+    margin-top: 1.5rem;
+    width: 12rem;
+    height: 4rem;
+    object-fit: contain;
+    margin-bottom: 4.5rem;
+}
+
+.item2 {
+    grid-area: 1/2/span 2/ span 2;
+    background-color: var(--purple_500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    padding-left: unset;
+}
+
+.item2 h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 4rem;
+    letter-spacing: -3px;
+    color: var(--white);
+    text-align: center;
+}
+
+.item2 img {
+    object-fit: cover;
+    width: 12rem;
+    height: 2rem;
+}
+
+.item2 span {
+    color: white;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+}
+
+.item3 {
+    grid-area: 1/4/span 3/span 1;
+    background-color: var(--purple_100);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 2rem;
+}
+
+.item3 h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -2px;
+}
+
+.item3 img {
+    width: 21rem;
+    height: 20rem;
+    object-fit: cover;
+    transform: translateX(20%);
+}
+
+.item3 span {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+}
+
+.item4 {
+    grid-area: 3/2/span 1/ span 1;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.item4 img {
+    padding-left: 1.5rem;
+    width: 100%;
+    height: 4rem;
+    object-fit: cover;
+}
+
+.item4 h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -2px;
+    margin-top: 1.5rem;
+}
+
+.item5 {
+    grid-area: 3/3/span 1/ span 1;
+    background-color: var(--yellow_500);
+    padding: 1.5rem;
+    padding-bottom: unset;
+    overflow: hidden;
+}
+
+.item5 h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -2px;
+}
+
+.item5 img {
+    width: 13rem;
+    height: 10rem;
+    transform: translateY(15%);
+}
+
+.item6 {
+    grid-area: 3/1/span 2/ span 1;
+    background-color: var(--yellow_500);
+}
+
+.item6 h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -2px;
+    margin-bottom: 3.5rem;
+}
+
+.item6 img {
+    width: 13.75rem;
+    height: 13.75rem;
+    object-fit: cover;
+}
+
+.item7 {
+    grid-area: 4/2/span 1/ span 1;
+    padding-bottom: 1.5rem;
+}
+
+.item7 h2 {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+}
+
+.item7 h2 span {
+    font-size: 4rem;
+    line-height: 4rem;
+}
+
+.item7 img {
+    margin-top: 2.5rem;
+    width: 11rem;
+    height: 4rem;
+}
+
+.item8 {
+    grid-area: 4/3/span 1/ span 2;
+    background-color: var(--purple_500);
+    display: flex;
+    gap: 1rem;
+}
+
+.item8 img {
+    width: 13.75rem;
+    height: 12.5rem;
+    object-fit: cover;
+}
+
+.item8 h2 {
+    color: white;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: -2px;
+}
